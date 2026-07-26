@@ -208,7 +208,7 @@ else:
 
             st.markdown("### Because you liked this, you might enjoy:")
 
-            recs = recommend_by_index(df, similarity_matrix, idx, top_n=6)
+            recs = recommend_by_index(df, similarity_matrix, idx, top_n=5)
             recs["genres"] = recs["genres"].apply(lambda g: ", ".join(g) if g else "Unknown")
 
             cols = st.columns(3)
